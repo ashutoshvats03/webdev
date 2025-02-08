@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="output.css" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="bg-red-900 flex justify-between">
+        <div >Logo</div>
+       <div class="flex gap-3">
+        <div>About</div>
+        <div>Home</div>
+        <div>LogIn</div>
+       </div>
+    </nav>
+    <div class="content bg-black text-white h-screen">
+        <table class="flex">
+            <tr>
+              <td><label for="surname">Surname:</label></td>
+              <td><input class="text-black" type="text" id="surname" name="surname"></td>
+            </tr>
+            <tr>
+              <td><label for="othernames">Other Names:</label></td>
+              <td><input class="text-black" type="text" id="othernames" name="othernames"></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input class="text-black" type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+              <td><label for="phone">Phone:</label></td>
+              <td><input class="text-black" type="tel" id="phone" name="phone"></td>
+            </tr>
+            <tr>
+              <td><label for="address">Address:</label></td>
+              <td><input class="text-black" type="text" id="address" name="address"></td>
+            </tr>
+          </table>
+          <button class="bg-red-500" id="myButton">Invoke Link</button>
+
+          <script>
+              document.getElementById('myButton').addEventListener('click', () => {
+                  fetch('http://localhost:3000/create')
+                      .then(response => {
+                          if (response.ok) {
+                              console.log('Request was successful');
+                          } else {
+                              console.log('Request failed');
+                          }
+                      })
+                      .catch(error => {
+                          console.log('Error:', error);
+                      });
+              });
+          </script>
+    </div>
+</body>
+</html>

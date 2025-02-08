@@ -1,0 +1,10 @@
+Install express,nodemon,ejs
+
+Go to express copy port thing
+
+Go to ejs for express write app.set('view engine','ejs') in index.js
+Make ejs in views file
+
+For ejs calculation <% %> for variable <%= %>
+
+GO TO EJS WEBSITE TO SEE MORE
